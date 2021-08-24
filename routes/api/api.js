@@ -66,7 +66,7 @@ router.get('/simpleQuery', async (req, res) => {
     return res.json(result);
   })
       .catch(err => {
-        console.error(err);
+        console.error("caught 3!!! = ", err);
         if (err.sqlMessage){
           console.log("SQL error detected:", err.sqlMessage);
           res.json({"success": false, "sqlMessage": err.sqlMessage});

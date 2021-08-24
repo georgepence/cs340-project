@@ -31,7 +31,7 @@ async function testDB(){
     for (let e of testQueries){
       (e.trim()) && await queryAsync(e).catch(() => {console.log("caught!")}); // do each query
     }
-    queryAsync('select * from test').then(result => console.log(result)).catch(() => {console.log("caught!")});
+    queryAsync('select * from test').then(result => console.log(result)).catch(() => {console.log("caught 2!")});
   } catch (e)
   {
     console.error(e);
