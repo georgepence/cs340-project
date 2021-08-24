@@ -11,12 +11,15 @@ const onSuccess = (setState, setResult) => (res) => {
     console.log("Request did not return success:", res);
     return Promise.reject();
   } else if (setResult){
-    console.log(res);
     return res.json()
       .then(res => {
-        console.log("json here:", res);
-        setResult(res);
-        return res;
+        if (res.success === false) {
+          console.log("look at this ", res);
+        } else {
+          console.log("json here:", res);
+          setResult(res);
+          return res;
+        }
     });
   }
   return res.json();
