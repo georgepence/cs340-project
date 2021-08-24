@@ -6,7 +6,7 @@
   "scripts": {
     "preinstall": "npm run client-install",
     "client-install": "npm install --prefix client",
-    "start": "gunicorn app:app",
+    "start": "node server.js",
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
