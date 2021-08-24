@@ -29,9 +29,9 @@ async function testDB(){
     let testDBSetup = fs.readFileSync('./database/old/test_db.sql', 'utf8'); // read in file
     testQueries = testDBSetup.split('\n').join(' ').split(';'); // split into queries
     for (let e of testQueries){
-      (e.trim()) && await queryAsync(e); // do each query
+      (e.trim()) && await queryAsync(e).catch(() => {console.log("caught!")}); // do each query
     }
-    queryAsync('select * from test').then(result => console.log(result));
+    queryAsync('select * from test').then(result => console.log(result)).catch(() => {console.log("caught!")});
   } catch (e)
   {
     console.error(e);
