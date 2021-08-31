@@ -129,7 +129,7 @@ function Guests(props) {
   }
 
   return (
-    <Container className="m-5">
+    <Container className="sm-m-5">
       
       <p className={"mt-2"}> </p>
       <LoadingStatus status={loadingStatus}/>
