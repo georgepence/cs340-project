@@ -20,7 +20,7 @@ function formatDate(date) {
 function calcDates(bookingId) {
 
   let startDateObj = new Date(today.getTime() + (86400000 * (Math.ceil(bookingId / 2) - 2)));
-  let endDateObj = new Date(today.getTime() + (86400000 * (Math.floor(bookingId / 2))));
+  let endDateObj = new Date(today.getTime() + (86400000 * (Math.floor(bookingId / 2) - 0)));
   return [startDateObj, endDateObj];
 }
 
@@ -46,7 +46,7 @@ let today = new Date(year, month, day);
 
 try{
 
-  let DDQ = fs.readFileSync('../../../../public_html/ddq/DDQ_file.sql', 'utf8');
+  let DDQ = fs.readFileSync('../DDQ_file_2.sql', 'utf8');
   
   console.log(DDQ);
   
@@ -58,7 +58,7 @@ try{
   
   console.log(newDDQ)
   
-  fs.writeFile('../../../../public_html/ddq/DDQ_file.sql',newDDQ, err => {
+  fs.writeFile('../DDQ_file_2.sql',newDDQ, err => {
     if (err) {
       console.log(err);
     }
