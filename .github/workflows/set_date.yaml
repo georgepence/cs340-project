@@ -2,6 +2,9 @@ name: setDate
 
 description: Sets Dates
 
+on:
+  workflow_dispatch:
+
 runs:
   using: 'node15'
   main: '../../database/scripts/setDatesDDQ.js'
