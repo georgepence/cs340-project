@@ -1,0 +1,7 @@
+name: setDate
+
+description: Sets Dates
+
+runs:
+  using: 'node15'
+  main: '../../database/scripts/setDatesDDQ.js'
