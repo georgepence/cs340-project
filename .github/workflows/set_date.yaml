@@ -13,7 +13,8 @@ jobs:
   set-date:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Clone repo
+        uses: actions/checkout@v2
       - name: list files 1
         run: |
           ls -al
