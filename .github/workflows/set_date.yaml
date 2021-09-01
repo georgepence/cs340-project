@@ -8,3 +8,15 @@ on:
 runs:
   using: 'node15'
   main: '../../database/scripts/setDatesDDQ.js'
+
+jobs:
+  set-date:
+    runs-on: ubuntu-latest
+    steps:
+      - name: setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16.3.0'
+      - name: set-date
+        run: |
+          noode ../../database/scripts/setDatesDDQ.js
