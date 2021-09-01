@@ -46,7 +46,7 @@ let today = new Date(year, month, day);
 
 try{
 
-  let DDQ = fs.readFileSync('../../database/DDQ_file_2.sql', 'utf8');
+  let DDQ = fs.readFileSync('./database/DDQ_file_2.sql', 'utf8');
   
   console.log(DDQ);
   
@@ -58,7 +58,7 @@ try{
   
   console.log(newDDQ)
   
-  fs.writeFile('../../database/DDQ_file_2.sql',newDDQ, err => {
+  fs.writeFile('./database/DDQ_file_2.sql',newDDQ, err => {
     if (err) {
       console.log(err);
     }
