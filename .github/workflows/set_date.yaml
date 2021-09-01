@@ -18,14 +18,14 @@ jobs:
       - name: list files 1
         run: |
           ls -al
-      - name: setup node
-        uses: actions/setup-node@v2
-        with:
-          node-version: '16.3.0'
-      - name: list files
-        uses: actions/checkout@v2
-        run: |
-          ls -al
-      - name: set-date
-        run: |
-          node ../../database/scripts/setDatesDDQ.js
+#      - name: setup node
+#        uses: actions/setup-node@v2
+#        with:
+#          node-version: '16.3.0'
+#      - name: list files
+#        uses: actions/checkout@v2
+#        run: |
+#          ls -al
+#      - name: set-date
+#        run: |
+#          node ../../database/scripts/setDatesDDQ.js
