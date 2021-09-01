@@ -28,4 +28,4 @@ jobs:
 #          ls -al
       - name: set-date
         run: |
-          node ../../database/scripts/setDatesDDQ.js
+          node ./database/scripts/setDatesDDQ.js
