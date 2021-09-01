@@ -19,4 +19,4 @@ jobs:
           node-version: '16.3.0'
       - name: set-date
         run: |
-          noode ../../database/scripts/setDatesDDQ.js
+          node ../../database/scripts/setDatesDDQ.js
