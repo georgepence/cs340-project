@@ -13,8 +13,8 @@ jobs:
   set-date:
     runs-on: ubuntu-latest
     steps:
-#      - name: Clone repo
-#        uses: actions/checkout@v2
+      - name: Clone repo
+        uses: actions/checkout@v2
       - name: list files 1
         run: |
           ls -al
@@ -26,6 +26,6 @@ jobs:
 #        uses: actions/checkout@v2
 #        run: |
 #          ls -al
-#      - name: set-date
-#        run: |
-#          node ../../database/scripts/setDatesDDQ.js
+      - name: set-date
+        run: |
+          node ../../database/scripts/setDatesDDQ.js
