@@ -13,8 +13,8 @@ jobs:
   set-date:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: list files 1
-        uses: actions/checkout@v2
         run: |
           ls -al
       - name: setup node
