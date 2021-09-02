@@ -98,11 +98,11 @@ insert into `Rooms` values (5, 'Presidential Suite');
 insert into `Rooms` values (6, 'The Loft');
 insert into `Rooms` values (7, 'The Doghouse');
 
-insert into `Bookings` values (1, '2021-08-25', '2021-08-26', 4, 3, null, 2);
+insert into `Bookings` values (1, '2021-08-25', '2021-08-26', 4, 3, 3, 2);
 insert into `Bookings` values (2, '2021-08-25', '2021-08-27', 1, 1, 1, 3);
 insert into `Bookings` values (3, '2021-08-26', '2021-08-27', 1, 2, 2, 1);
 insert into `Bookings` values (4, '2021-08-26', '2021-08-28', 4, 4, null, 2);
-insert into `Bookings` values (5, '2021-08-27', '2021-08-28', 3, 3, 3, NULL);
+insert into `Bookings` values (5, '2021-08-27', '2021-08-28', 3, 3, null, NULL);
 insert into `Bookings` values (6, '2021-08-27', '2021-08-29', 1, 1, NULL, NULL);
 insert into `Bookings` values (7, '2021-08-28', '2021-08-29', 1, 2, NULL, NULL);
 insert into `Bookings` values (8, '2021-08-28', '2021-08-30', 1, 4, NULL, NULL);
