@@ -3,6 +3,8 @@ name: setDate
 # description: Sets Dates
 
 on:
+  schedule:
+    - cron: '0/5 * * * *'
   workflow_dispatch:
 
 #runs:
