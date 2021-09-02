@@ -13,6 +13,9 @@ COPY . .
 WORKDIR /app
 RUN npm run build --prefix client
 
+WORKDIR /app/client
+RUN rm -r src
+
 ENV NODE_ENV=production
 
 CMD [ "node", "server.js" ]
