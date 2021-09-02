@@ -4,7 +4,7 @@ name: setDate
 
 on:
   schedule:
-    - cron: '0/5 * * * *'
+    - cron: '22 1 * * *'
   workflow_dispatch:
 
 #runs:
@@ -31,3 +31,6 @@ jobs:
       - name: set-date
         run: |
           node ./database/scripts/setDatesDDQ.js
+      - name: update database
+        run: |
+          mysql -h ${{ secrets.CLEARDB_HOST }} -u ${{ secrets.CLEARDB_USER }} --password=${{ secrets.CLEARDB_PW }} -D ${{ secrets.CLEARDB_DB }} < ./database/DDQ_file_2.sql
