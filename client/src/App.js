@@ -11,9 +11,10 @@ import Home from './Routes/Home';
 import Test from './Routes/Test';
 import Pets from './Routes/Pets';
 import Owners from './Routes/Owners';
+import Credits from './Routes/Credits';
 import {useState, useEffect} from "react";
 import superUser from './Models/superUser';
-import {Toast} from 'react-bootstrap';
+import {Container, Toast} from 'react-bootstrap';
 import {ReactComponent as Logo} from './Components/images/fabicon.svg';
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
     <div className="App">
 
       {/* toast to remind about titles */}
-      <Toast className={"shadow d-none d-md-block"}
+      <Toast className={"shadow d-none"}
       style={{position: "absolute", right: 0, top: 0, margin: "5%", zIndex: 999,
         borderColor:"black", borderStyle:"solid"}}
       show={showToast} onClose={() => setShowToast(false)}>
@@ -82,11 +83,17 @@ function App() {
       <Route path="/Owners">
         <Owners/>
       </Route>
+      <Route path="/Credits">
+        <Credits/>
+      </Route>
       {/* the root route apparently needs to go here so it doesn't eat the other routes */}
       <Route path="/">
         <Home/>
       </Route>
     </Switch>
+        <div id={"footer"}>
+          <p className={"mt-3"}>Website by <a href={"/Credits"} id={"credits"}>Mac Pence and Nathan Taylor</a></p>
+        </div>
     </Router>
     </div>
   );
