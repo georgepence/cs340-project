@@ -92,7 +92,7 @@ function App() {
       </Route>
     </Switch>
         <div id={"footer"}>
-          <p className={"mt-3"}>Website by <a href={"/Credits"} id={"credits"}>Mac Pence and Nathan Taylor</a></p>
+          <p id={"footer-text"}>Website by <a href={"/Credits"} id={"credits"}>Mac Pence and Nathan Taylor</a></p>
         </div>
     </Router>
     </div>

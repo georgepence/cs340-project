@@ -121,12 +121,17 @@ html {
 }
 
 #footer {
+  position: relative;
   height: 56px;
   background-color: #212529;
   width: 100%;
   text-align: center;
   color: white;
-  padding-top: 2px;
+  padding-top: 15px;
+}
+
+#footer-text {
+  position: relative;
 }
 
 #credits {
