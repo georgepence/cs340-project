@@ -339,7 +339,7 @@ function Bookings(props) {
   return (
       <div>
         <Container>
-          <h1 className={"mt-4 mb-3"}>Manage Bookings</h1>
+          <h1 className={"mt-4 mb-3"}>Bookings</h1>
         </Container>
         
         {/*        Header Selections        */}
